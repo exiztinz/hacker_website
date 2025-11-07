@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroDay Sentinel | Cybersecurity Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="matrix"></canvas>
+
+    <div class="noise-overlay"></div>
+    <div class="scanline"></div>
+
+    <nav class="command-bar">
+      <div class="command-bar__brand">
+        <span class="brand__sig">ZeroDay Sentinel</span>
+        <span class="brand__tag">build 5.3.7</span>
+      </div>
+      <div class="command-bar__nav">
+        <a href="#projects">Projects</a>
+        <a href="#intel">Intel</a>
+        <a href="#bug-bounties">Bounties</a>
+        <a href="#certifications">Certs</a>
+        <a href="#experience">Ops</a>
+        <a href="#toolkit">Toolkit</a>
+      </div>
+      <div class="command-bar__actions">
+        <button class="cta ghost" id="calm-toggle" aria-pressed="false">
+          Calm Mode
+        </button>
+        <a class="cta primary" href="mailto:zeroday@sentinel.red">Engage</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">> initializing portfolio.exe</p>
+        <h1 class="hero__title glitch" data-text="ZeroDay Sentinel">
+          ZeroDay Sentinel
+        </h1>
+        <p class="hero__subtitle">
+          Offensive Security Engineer | Bug Bounty Hunter | Digital Forensics
+          Analyst
+        </p>
+        <p class="hero__body">
+          Part researcher, part incident quarterback. I build bespoke offensive tooling,
+          walk blue teams through live intrusions, and keep a roaming library of zero-day
+          simulations ready for the next engagement.
+        </p>
+        <div class="hero__badges">
+          <span class="badge">Red Team</span>
+          <span class="badge">DFIR</span>
+          <span class="badge">Threat Intel</span>
+        </div>
+        <div class="hero__cta">
+          <a class="cta primary" href="#projects">Open Mission Brief</a>
+          <button class="cta ghost" id="download-dossier">Download Dossier</button>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <p class="stat__label">Active Engagements</p>
+            <p class="stat__value" data-target="06">00</p>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Reported CVEs</p>
+            <p class="stat__value" data-target="11">00</p>
+          </div>
+          <div class="stat">
+            <p class="stat__label">Avg. Time-To-Root</p>
+            <p class="stat__value stat__value--glitch" data-target="14">00m</p>
+          </div>
+        </div>
+        <div class="hero__terminal">
+          <div class="terminal__header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal__title">/dev/tty0 — status monitor</span>
+          </div>
+          <div class="terminal__body" id="terminal-feed"></div>
+        </div>
+      </div>
+      <div class="hero__avatar">
+        <div class="avatar__ring">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity avatar" />
+        </div>
+        <div class="avatar__halo halo--one"></div>
+        <div class="avatar__halo halo--two"></div>
+      </div>
+      <div class="scroll-indicator">
+        <span>scroll to deploy</span>
+        <div class="scroll-indicator__bar"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel--intel" id="intel">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/threat-intel</p>
+          <h2 class="panel__title">Mission Snapshot & Live Telemetry</h2>
+        </div>
+        <div class="intel-grid">
+          <article class="intel-card">
+            <h3>Mission Snapshot</h3>
+            <p>
+              Embedded within red-on-blue fusion teams delivering adversary emulation playbooks for
+              financial, healthcare, and energy grids. Each engagement ships with tailored control-plane
+              bypasses, purple-team drills, and SOC enablement packages.
+            </p>
+            <ul>
+              <li>Maintaining five concurrent stealth assessments</li>
+              <li>Authoring playbooks for MITRE ATT&CK v14 coverage</li>
+              <li>Coaching blue teams on live malware handling</li>
+            </ul>
+          </article>
+          <article class="intel-card intel-card--telemetry">
+            <h3>Live Telemetry</h3>
+            <div class="intel-card__metrics">
+              <div class="intel__metric" data-progress="94">
+                <span>Exploit Weaponization</span>
+                <div class="meter"><span></span></div>
+              </div>
+              <div class="intel__metric" data-progress="82">
+                <span>Detection Evasion</span>
+                <div class="meter"><span></span></div>
+              </div>
+              <div class="intel__metric" data-progress="76">
+                <span>Lateral Movement Forecast</span>
+                <div class="meter"><span></span></div>
+              </div>
+              <div class="intel__metric" data-progress="63">
+                <span>Incident Containment Readiness</span>
+                <div class="meter"><span></span></div>
+              </div>
+            </div>
+            <p class="intel-card__footer">Telemetry stream auto-syncs every 45 seconds.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--projects" id="projects">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/projects</p>
+          <h2 class="panel__title">Operational Tooling & Research</h2>
+        </div>
+        <div class="grid grid--cards">
+          <article class="card neon">
+            <div class="card__header">
+              <p class="card__eyebrow">Recon OSINT</p>
+              <h3>SignalGhost</h3>
+            </div>
+            <p>
+              AI-assisted reconnaissance pipeline blending Shodan, Censys, and
+              in-house transforms to map adversary infrastructure in realtime.
+            </p>
+            <ul>
+              <li>Reactive graph visualizer with temporal diffing</li>
+              <li>Modular collectors for quick zero-day pivoting</li>
+            </ul>
+            <span class="card__tag">Rust · Neo4j · WebGL</span>
+          </article>
+          <article class="card neon">
+            <div class="card__header">
+              <p class="card__eyebrow">Ops Portal</p>
+              <h3>BlackICE Console</h3>
+            </div>
+            <p>
+              Operator-first dashboard that fuses beacon health, implant orchestration, and
+              telemetry replay in a single neon-clad viewport with live packet scrubbing.
+            </p>
+            <ul>
+              <li>Command queue with quorum approval workflow</li>
+              <li>Bleedsight panel visualizing decrypted C2 frames</li>
+            </ul>
+            <span class="card__tag">TypeScript · WebSockets · GLSL</span>
+          </article>
+          <article class="card neon">
+            <div class="card__header">
+              <p class="card__eyebrow">Exploit Dev</p>
+              <h3>Kernel Phantom</h3>
+            </div>
+            <p>
+              Automated Windows kernel fuzzing lab with Snapshot
+              differential-analysis and auto triage for crash reproducibility.
+            </p>
+            <ul>
+              <li>Windbg automation for fast crash bucketing</li>
+              <li>Hypervisor snapshots to isolate exploit chains</li>
+            </ul>
+            <span class="card__tag">C · Python · WinDbg</span>
+          </article>
+          <article class="card neon">
+            <div class="card__header">
+              <p class="card__eyebrow">Threat Intel</p>
+              <h3>GhostPulse</h3>
+            </div>
+            <p>
+              ML-backed anomaly detector for OT networks that projects lateral
+              movement probability onto a shared situational map.
+            </p>
+            <ul>
+              <li>Tactical overlays for SOC & IR split teams</li>
+              <li>Red/Blue synchronized simulation modules</li>
+            </ul>
+            <span class="card__tag">Go · gRPC · PyTorch</span>
+          </article>
+          <article class="card neon">
+            <div class="card__header">
+              <p class="card__eyebrow">Supply Chain</p>
+              <h3>SigilForge</h3>
+            </div>
+            <p>
+              Tamper-proof SBOM attestor with anomaly hooks that light up when third-party vendors
+              ship suspicious packages or unpinned dependencies.
+            </p>
+            <ul>
+              <li>YARA streaming on artifact registries</li>
+              <li>Neon diffs for DevSecOps rapid response</li>
+            </ul>
+            <span class="card__tag">Rego · Wasm · eBPF</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--bugbounties" id="bug-bounties">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/bug-bounties</p>
+          <h2 class="panel__title">Bounty Disclosures</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__date">2024-02</div>
+            <div class="timeline__body">
+              <h3>Critical SSRF → RCE</h3>
+              <p>Global fintech API | $18,000</p>
+              <p class="timeline__details">
+                Manipulated metadata endpoint, chained to AWS IMDS creds and
+                container escape. Reported with live exploit PoC and mitigations.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2023-11</div>
+            <div class="timeline__body">
+              <h3>OAuth Token Forgery</h3>
+              <p>Enterprise SaaS | $9,500</p>
+              <p class="timeline__details">
+                Crafted PKCE downgrade + state desync to inherit elevated org
+                roles. Delivered timeline & defense-in-depth guidance.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2023-05</div>
+            <div class="timeline__body">
+              <h3>Deserialization RCE</h3>
+              <p>GovSec vendor | $12,400</p>
+              <p class="timeline__details">
+                Gadget chain via legacy SOAP service, pivoted to domain admin in
+                11 minutes. Assisted with hot patch rollout.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2022-12</div>
+            <div class="timeline__body">
+              <h3>SAML Replay + Key Exfil</h3>
+              <p>Cloud identity provider | $14,700</p>
+              <p class="timeline__details">
+                Poisoned ACS endpoint and replayed forged assertions to siphon long-lived signing keys.
+                Coordinated rolling credential resets with defender team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel--certs" id="certifications">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/certifications</p>
+          <h2 class="panel__title">Clearance & Credentials</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert neon">
+            <p class="cert__title">OSCP</p>
+            <p>Offensive Security Certified Professional</p>
+          </div>
+          <div class="cert neon">
+            <p class="cert__title">GXPN</p>
+            <p>GIAC Exploit Researcher & Advanced Pen Tester</p>
+          </div>
+          <div class="cert neon">
+            <p class="cert__title">GCTI</p>
+            <p>GIAC Cyber Threat Intelligence</p>
+          </div>
+          <div class="cert neon">
+            <p class="cert__title">CISSP</p>
+            <p>Certified Information Systems Security Professional</p>
+          </div>
+          <div class="cert neon">
+            <p class="cert__title">CRTO</p>
+            <p>Certified Red Team Operator</p>
+          </div>
+          <div class="cert neon">
+            <p class="cert__title">CCSP</p>
+            <p>Cloud Security Professional</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel--experience" id="experience">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/experience</p>
+          <h2 class="panel__title">Operational Timeline</h2>
+        </div>
+        <div class="experience-grid">
+          <article class="xp-card">
+            <header>
+              <p class="xp-card__title">Darkline Security</p>
+              <span class="xp-card__date">2022 — Present</span>
+            </header>
+            <p class="xp-card__role">Lead Offensive Engineer</p>
+            <ul>
+              <li>Built purple-team lab simulating APT29 tradecraft</li>
+              <li>Invented live binary patching toolkit for evasive ops</li>
+            </ul>
+          </article>
+          <article class="xp-card">
+            <header>
+              <p class="xp-card__title">Sentinel Forge</p>
+              <span class="xp-card__date">2020 — 2022</span>
+            </header>
+            <p class="xp-card__role">Threat Research Lead</p>
+            <ul>
+              <li>Published 11 CVEs across ICS and mobile stacks</li>
+              <li>Designed adversary emulation for fortune 100 SOCs</li>
+            </ul>
+          </article>
+          <article class="xp-card">
+            <header>
+              <p class="xp-card__title">CipherLabs</p>
+              <span class="xp-card__date">2017 — 2020</span>
+            </header>
+              <p class="xp-card__role">DFIR Specialist</p>
+            <ul>
+              <li>Co-led 36 hr ransomware containment mission</li>
+              <li>Reverse engineered custom Golang backdoor</li>
+            </ul>
+          </article>
+          <article class="xp-card">
+            <header>
+              <p class="xp-card__title">Freelance</p>
+              <span class="xp-card__date">2013 — 2017</span>
+            </header>
+            <p class="xp-card__role">Independent Researcher</p>
+            <ul>
+              <li>Earned 40+ public bug bounty acknowledgements</li>
+              <li>Published weekly zines dissecting darkweb tradecraft</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--toolkit" id="toolkit">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/toolkit</p>
+          <h2 class="panel__title">Loadout: Favorite Implants & Utilities</h2>
+        </div>
+        <div class="toolkit-grid">
+          <article class="tool-card">
+            <h3>GhostDrop Probes</h3>
+            <p>
+              Disposable implants for staging payloads behind zero-trust perimeters. Auto-retire after
+              12 hours or when sensors spike above baseline.
+            </p>
+            <span>Stack: Nim · Cobalt Strike · WireGuard</span>
+          </article>
+          <article class="tool-card">
+            <h3>Obsidian Relay Mesh</h3>
+            <p>
+              Multi-cloud redirector fabric that rotates domains, TLS personas, and padding styles to
+              shred signature-based detection.
+            </p>
+            <span>Stack: Terraform · Nginx · Rustls</span>
+          </article>
+          <article class="tool-card">
+            <h3>Chimera Lab</h3>
+            <p>
+              Offline detonation chamber with deterministic replays to teach IR teams what real-world
+              extortion crews look like in telemetry.
+            </p>
+            <span>Stack: KVM · Zeek · Kafka</span>
+          </article>
+          <article class="tool-card">
+            <h3>CryptForge Vaults</h3>
+            <p>
+              Hardened dropboxes for exchanging forensic data with clients without bleeding secrets over
+              email attachments or chat apps.
+            </p>
+            <span>Stack: Age · Tailscale · SOPS</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Console open. Listening on ports 1337 · 8080 · 31337</p>
+      <div class="footer__links">
+        <a href="mailto:zeroday@sentinel.red">Contact</a>
+        <a href="https://github.com">GitHub</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
