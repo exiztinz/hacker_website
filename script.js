@@ -1,10 +1,20 @@
 const matrixCanvas = document.getElementById("matrix");
 const ctx = matrixCanvas.getContext("2d");
-const fontSize = 16;
+
+const computeFontSize = () => {
+  const width = window.innerWidth;
+  if (width < 420) return 10;
+  if (width < 640) return 12;
+  if (width < 900) return 14;
+  return 16;
+};
+
+let fontSize = computeFontSize();
 let columns = Math.floor(window.innerWidth / fontSize);
 let rainDrops = Array(columns).fill(1);
 
 const resizeCanvas = () => {
+  fontSize = computeFontSize();
   matrixCanvas.width = window.innerWidth;
   matrixCanvas.height = window.innerHeight;
   columns = Math.floor(window.innerWidth / fontSize);
