@@ -12,17 +12,38 @@ const computeFontSize = () => {
 let fontSize = computeFontSize();
 let columns = Math.floor(window.innerWidth / fontSize);
 let rainDrops = Array(columns).fill(1);
+let viewportWidth = window.innerWidth;
+let viewportHeight = window.innerHeight;
 
-const resizeCanvas = () => {
+const syncMatrixDimensions = () => {
   fontSize = computeFontSize();
-  matrixCanvas.width = window.innerWidth;
-  matrixCanvas.height = window.innerHeight;
-  columns = Math.floor(window.innerWidth / fontSize);
+  viewportWidth = window.innerWidth;
+  viewportHeight = window.innerHeight;
+  matrixCanvas.width = viewportWidth;
+  matrixCanvas.height = viewportHeight;
+  columns = Math.floor(viewportWidth / fontSize);
   rainDrops = Array(columns).fill(1);
 };
 
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+const handleResize = () => {
+  const nextWidth = window.innerWidth;
+  const nextHeight = window.innerHeight;
+  const widthChanged = nextWidth !== viewportWidth;
+  const heightChanged = nextHeight !== viewportHeight;
+
+  if (!widthChanged && !heightChanged) return;
+
+  if (!widthChanged && heightChanged) {
+    viewportHeight = nextHeight;
+    matrixCanvas.height = viewportHeight;
+    return;
+  }
+
+  syncMatrixDimensions();
+};
+
+syncMatrixDimensions();
+window.addEventListener("resize", handleResize);
 
 const katakana = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロゴゾドボポヴッン";
 const latin = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
