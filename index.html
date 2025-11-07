@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZeroDay Sentinel | Cybersecurity Portfolio</title>
+    <title>Joseph Tascona | Cybersecurity Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,47 +17,64 @@
 
     <div class="noise-overlay"></div>
     <div class="scanline"></div>
+    <div class="grid-veil" aria-hidden="true"></div>
+    <div class="orb-field" aria-hidden="true"></div>
+
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-progress"></div>
+    </div>
 
     <nav class="command-bar">
       <div class="command-bar__brand">
-        <span class="brand__sig">ZeroDay Sentinel</span>
+        <span class="brand__sig">Tascona Ops Center</span>
         <span class="brand__tag">build 5.3.7</span>
       </div>
       <div class="command-bar__nav">
-        <a href="#projects">Projects</a>
         <a href="#intel">Intel</a>
-        <a href="#bug-bounties">Bounties</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#highlights">Highlights</a>
         <a href="#certifications">Certs</a>
-        <a href="#experience">Ops</a>
-        <a href="#toolkit">Toolkit</a>
+        <a href="#experience">Experience</a>
+        <a href="#toolkit">Lab Stack</a>
       </div>
       <div class="command-bar__actions">
-        <button class="cta ghost" id="calm-toggle" aria-pressed="false">
-          Calm Mode
-        </button>
-        <a class="cta primary" href="mailto:zeroday@sentinel.red">Engage</a>
+        <a class="cta primary" href="mailto:joseph@josephtascona.com">Engage</a>
       </div>
     </nav>
+
+    <section class="ticker" role="status" aria-live="polite">
+      <span class="ticker__label">status</span>
+      <div class="ticker__window">
+        <span class="ticker__text" id="ticker-text">Scanning perimeter nodes...</span>
+      </div>
+    </section>
 
     <header class="hero">
       <div class="hero__content">
         <p class="hero__eyebrow">> initializing portfolio.exe</p>
-        <h1 class="hero__title glitch" data-text="ZeroDay Sentinel">
-          ZeroDay Sentinel
+        <h1 class="hero__title glitch" data-text="Joseph Tascona">
+          Joseph Tascona
         </h1>
         <p class="hero__subtitle">
-          Offensive Security Engineer | Bug Bounty Hunter | Digital Forensics
-          Analyst
+          Cybersecurity & DevSecOps Student · Full-Stack + Cloud Security Enthusiast
         </p>
         <p class="hero__body">
-          Part researcher, part incident quarterback. I build bespoke offensive tooling,
-          walk blue teams through live intrusions, and keep a roaming library of zero-day
-          simulations ready for the next engagement.
+          IT & cybersecurity student with 1.5 years of co-op impact across full-stack engineering,
+          Azure DevOps, and cloud defense. Fluent in English & French, obsessed with building
+          threat-resilient automation, secure data flows, and hands-on adversary simulations.
         </p>
         <div class="hero__badges">
-          <span class="badge">Red Team</span>
-          <span class="badge">DFIR</span>
-          <span class="badge">Threat Intel</span>
+          <span class="badge">Barrie · ON</span>
+          <span class="badge">English / Français</span>
+          <span class="badge">Full-Stack & Cloud</span>
+        </div>
+        <div class="hero__contact">
+          <a href="mailto:joseph@josephtascona.com">joseph@josephtascona.com</a>
+          <span>(705) 737-7265</span>
+          <a href="https://josephtascona.com" target="_blank" rel="noreferrer">Website</a>
+          <a href="https://github.com/josephtascona" target="_blank" rel="noreferrer">GitHub</a>
         </div>
         <div class="hero__cta">
           <a class="cta primary" href="#projects">Open Mission Brief</a>
@@ -66,15 +83,15 @@
         <div class="hero__stats">
           <div class="stat">
             <p class="stat__label">Active Engagements</p>
-            <p class="stat__value" data-target="06">00</p>
+            <p class="stat__value" data-target="03">00</p>
           </div>
           <div class="stat">
-            <p class="stat__label">Reported CVEs</p>
-            <p class="stat__value" data-target="11">00</p>
+            <p class="stat__label">TryHackMe Labs</p>
+            <p class="stat__value" data-target="24">00</p>
           </div>
           <div class="stat">
             <p class="stat__label">Avg. Time-To-Root</p>
-            <p class="stat__value stat__value--glitch" data-target="14">00m</p>
+            <p class="stat__value stat__value--glitch" data-target="18">00m</p>
           </div>
         </div>
         <div class="hero__terminal">
@@ -110,37 +127,127 @@
           <article class="intel-card">
             <h3>Mission Snapshot</h3>
             <p>
-              Embedded within red-on-blue fusion teams delivering adversary emulation playbooks for
-              financial, healthcare, and energy grids. Each engagement ships with tailored control-plane
-              bypasses, purple-team drills, and SOC enablement packages.
+              IT & Cybersecurity student blending full-stack builds with
+              DevSecOps muscle. 1.5 years of co-op inside Azure, React, SQL, and automation-heavy
+              pipelines, with a penchant for data protection and bilingual stakeholder comms.
             </p>
             <ul>
-              <li>Maintaining five concurrent stealth assessments</li>
-              <li>Authoring playbooks for MITRE ATT&CK v14 coverage</li>
-              <li>Coaching blue teams on live malware handling</li>
+              <li>Co-op veteran across Azure DevOps, CI/CD, and cloud hardening</li>
+              <li>Threat-resilient app designs driven by React, Python, and Rust prototypes</li>
+              <li>Comfortable briefing execs en anglais ou en français</li>
             </ul>
           </article>
           <article class="intel-card intel-card--telemetry">
             <h3>Live Telemetry</h3>
             <div class="intel-card__metrics">
               <div class="intel__metric" data-progress="94">
-                <span>Exploit Weaponization</span>
+                <span>Cloud Automation Readiness</span>
                 <div class="meter"><span></span></div>
               </div>
               <div class="intel__metric" data-progress="82">
-                <span>Detection Evasion</span>
+                <span>Security Automation Focus</span>
                 <div class="meter"><span></span></div>
               </div>
               <div class="intel__metric" data-progress="76">
-                <span>Lateral Movement Forecast</span>
+                <span>Data Quality Confidence</span>
                 <div class="meter"><span></span></div>
               </div>
               <div class="intel__metric" data-progress="63">
-                <span>Incident Containment Readiness</span>
+                <span>Incident Practice / Labs</span>
                 <div class="meter"><span></span></div>
               </div>
             </div>
             <p class="intel-card__footer">Telemetry stream auto-syncs every 45 seconds.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--method" id="workflow">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/workflow</p>
+          <h2 class="panel__title">Build · Secure · Validate · Share</h2>
+        </div>
+        <div class="method-grid">
+          <article class="method-card">
+            <p class="method__step">01 · Discover</p>
+            <p>
+              Research requirements, gather Azure + on-prem context, and map data flows before writing a
+              single line of code or Terraform.
+            </p>
+            <div class="method__meter" data-progress="92"><span></span></div>
+          </article>
+          <article class="method-card">
+            <p class="method__step">02 · Build & Automate</p>
+            <p>
+              Ship React/Node features, Azure Functions, and CI/CD workflows with guardrails such as unit
+              tests, linting, and policy checks.
+            </p>
+            <div class="method__meter" data-progress="88"><span></span></div>
+          </article>
+          <article class="method-card">
+            <p class="method__step">03 · Observe</p>
+            <p>
+              Monitor pipelines, dashboards, and logs (Power BI, Azure DevOps, Splunk/Sentinel) to spot
+              anomalies and regression risk quickly.
+            </p>
+            <div class="method__meter" data-progress="79"><span></span></div>
+          </article>
+          <article class="method-card">
+            <p class="method__step">04 · Share & Improve</p>
+            <p>
+              Document lab findings, host bilingual standups, and translate lessons into dashboards or
+              runbooks teammates can reuse.
+            </p>
+            <div class="method__meter" data-progress="95"><span></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--skills" id="skills">
+        <div class="panel__header">
+          <p class="panel__eyebrow">/skills</p>
+          <h2 class="panel__title">Technical Arsenal</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-pod">
+            <p class="skill__title">Languages</p>
+            <ul>
+              <li>Python, JavaScript/TypeScript, Rust</li>
+              <li>C / C++ for systems-level experiments</li>
+              <li>SQL (PostgreSQL, parameterized queries)</li>
+            </ul>
+          </article>
+          <article class="skill-pod">
+            <p class="skill__title">Frameworks & APIs</p>
+            <ul>
+              <li>React.js, Node.js, Express.js, Flask</li>
+              <li>Secure web app development with auth + RBAC</li>
+              <li>Postman suites & GraphQL/REST fuzzing</li>
+            </ul>
+          </article>
+          <article class="skill-pod">
+            <p class="skill__title">Cloud & DevOps</p>
+            <ul>
+              <li>Azure & AWS deployment pipelines, GitHub Actions</li>
+              <li>Docker, Kubernetes basics, Terraform (intro)</li>
+              <li>Linux server hardening, CI/CD observability</li>
+            </ul>
+          </article>
+          <article class="skill-pod">
+            <p class="skill__title">Security & Tooling</p>
+            <ul>
+              <li>Active Directory, Windows Server, VMware</li>
+              <li>Wireshark, Burp Suite, Nmap, Metasploit (intro)</li>
+              <li>SIEM familiarity (Splunk, Azure Sentinel basics)</li>
+            </ul>
+          </article>
+          <article class="skill-pod">
+            <p class="skill__title">Data & Analytics</p>
+            <ul>
+              <li>Power BI, Tableau, Excel automation</li>
+              <li>Pandas, NumPy, log enrichment, anomaly hunting</li>
+              <li>Role-based dashboards, access-controlled visuals</li>
+            </ul>
           </article>
         </div>
       </section>
@@ -153,129 +260,130 @@
         <div class="grid grid--cards">
           <article class="card neon">
             <div class="card__header">
-              <p class="card__eyebrow">Recon OSINT</p>
-              <h3>SignalGhost</h3>
+              <p class="card__eyebrow">TryHackMe Lab</p>
+              <h3>Pyrat</h3>
             </div>
             <p>
-              AI-assisted reconnaissance pipeline blending Shodan, Censys, and
-              in-house transforms to map adversary infrastructure in realtime.
+              Automated endpoint fuzzing and Python brute-force modules uncovered a hidden admin panel,
+              escalated creds to root, and completed full post-exploit enumeration inside a controlled lab.
             </p>
             <ul>
-              <li>Reactive graph visualizer with temporal diffing</li>
-              <li>Modular collectors for quick zero-day pivoting</li>
+              <li>Custom wordlists + timing analysis to avoid lockouts</li>
+              <li>Privilege escalation notes exported as defender guidance</li>
             </ul>
-            <span class="card__tag">Rust · Neo4j · WebGL</span>
+            <span class="card__tag">Python · Hydra · Linux</span>
           </article>
           <article class="card neon">
             <div class="card__header">
-              <p class="card__eyebrow">Ops Portal</p>
-              <h3>BlackICE Console</h3>
+              <p class="card__eyebrow">TryHackMe Lab</p>
+              <h3>Evil-GPT</h3>
             </div>
             <p>
-              Operator-first dashboard that fuses beacon health, implant orchestration, and
-              telemetry replay in a single neon-clad viewport with live packet scrubbing.
+              Stress-tested an AI chatbot for prompt-injection, auth bypass, and rate-limit failures;
+              produced mitigation playbook featuring input validation and least-privilege token scopes.
             </p>
             <ul>
-              <li>Command queue with quorum approval workflow</li>
-              <li>Bleedsight panel visualizing decrypted C2 frames</li>
+              <li>Crafted adversarial payloads & logging hooks</li>
+              <li>Documented proof-of-concepts for blue-team drills</li>
             </ul>
-            <span class="card__tag">TypeScript · WebSockets · GLSL</span>
+            <span class="card__tag">JavaScript · Flask · GPT APIs</span>
           </article>
           <article class="card neon">
             <div class="card__header">
-              <p class="card__eyebrow">Exploit Dev</p>
-              <h3>Kernel Phantom</h3>
+              <p class="card__eyebrow">Analytics</p>
+              <h3>Transit Ops BI</h3>
             </div>
             <p>
-              Automated Windows kernel fuzzing lab with Snapshot
-              differential-analysis and auto triage for crash reproducibility.
+              Role-based Power BI dashboards surfaced Azure DevOps metrics, security posture, and data
+              anomalies while enforcing controlled info access across transportation squads.
             </p>
             <ul>
-              <li>Windbg automation for fast crash bucketing</li>
-              <li>Hypervisor snapshots to isolate exploit chains</li>
+              <li>DirectQuery views hardened with row-level security</li>
+              <li>Alert hooks back into Jira / Azure Boards for tracking</li>
             </ul>
-            <span class="card__tag">C · Python · WinDbg</span>
+            <span class="card__tag">Power BI · SQL · Azure DevOps</span>
           </article>
           <article class="card neon">
             <div class="card__header">
-              <p class="card__eyebrow">Threat Intel</p>
-              <h3>GhostPulse</h3>
+              <p class="card__eyebrow">DevOps</p>
+              <h3>Azure Reliability Kit</h3>
             </div>
             <p>
-              ML-backed anomaly detector for OT networks that projects lateral
-              movement probability onto a shared situational map.
+              Hardened Azure DevOps pipelines with GitHub Actions checks, Docker image scanning, and
+              Terraform plan reviews so co-op releases stayed compliant.
             </p>
             <ul>
-              <li>Tactical overlays for SOC & IR split teams</li>
-              <li>Red/Blue synchronized simulation modules</li>
+              <li>Monitored pipelines + resolved CI/CD blockers</li>
+              <li>Documented runbooks for branching & approvals</li>
             </ul>
-            <span class="card__tag">Go · gRPC · PyTorch</span>
+            <span class="card__tag">Azure · Terraform · GitHub Actions</span>
           </article>
           <article class="card neon">
             <div class="card__header">
-              <p class="card__eyebrow">Supply Chain</p>
-              <h3>SigilForge</h3>
+              <p class="card__eyebrow">Data Quality</p>
+              <h3>SQL Anomaly Patrol</h3>
             </div>
             <p>
-              Tamper-proof SBOM attestor with anomaly hooks that light up when third-party vendors
-              ship suspicious packages or unpinned dependencies.
+              Built SQL/Python scripts to validate transportation datasets, flag anomalies, and feed
+              summaries into Power BI visuals for business stakeholders.
             </p>
             <ul>
-              <li>YARA streaming on artifact registries</li>
-              <li>Neon diffs for DevSecOps rapid response</li>
+              <li>Automated integrity checks + parameterized queries</li>
+              <li>Shared bilingual summaries for exec briefings</li>
             </ul>
-            <span class="card__tag">Rego · Wasm · eBPF</span>
+            <span class="card__tag">SQL · Python · Power BI</span>
           </article>
         </div>
       </section>
 
-      <section class="panel panel--bugbounties" id="bug-bounties">
+
+      <section class="panel panel--bugbounties" id="highlights">
         <div class="panel__header">
-          <p class="panel__eyebrow">/bug-bounties</p>
-          <h2 class="panel__title">Bounty Disclosures</h2>
+          <p class="panel__eyebrow">/highlights</p>
+          <h2 class="panel__title">Co-op & Lab Highlights</h2>
         </div>
         <div class="timeline">
           <div class="timeline__item">
-            <div class="timeline__date">2024-02</div>
+            <div class="timeline__date">2024-03</div>
             <div class="timeline__body">
-              <h3>Critical SSRF → RCE</h3>
-              <p>Global fintech API | $18,000</p>
+              <h3>Power BI Governance</h3>
+              <p>Ontario Ministry of Transportation</p>
               <p class="timeline__details">
-                Manipulated metadata endpoint, chained to AWS IMDS creds and
-                container escape. Reported with live exploit PoC and mitigations.
+                Built dashboards with row-level security so program managers only saw data relevant to
+                their roles, supporting controlled decision-making.
               </p>
             </div>
           </div>
           <div class="timeline__item">
             <div class="timeline__date">2023-11</div>
             <div class="timeline__body">
-              <h3>OAuth Token Forgery</h3>
-              <p>Enterprise SaaS | $9,500</p>
+              <h3>Azure DevOps Reliability</h3>
+              <p>Ontario Ministry of Transportation</p>
               <p class="timeline__details">
-                Crafted PKCE downgrade + state desync to inherit elevated org
-                roles. Delivered timeline & defense-in-depth guidance.
+                Monitored pipelines, resolved CI/CD blockers, and enforced config standards to keep
+                deployments stable and policy compliant.
               </p>
             </div>
           </div>
           <div class="timeline__item">
             <div class="timeline__date">2023-05</div>
             <div class="timeline__body">
-              <h3>Deserialization RCE</h3>
-              <p>GovSec vendor | $12,400</p>
+              <h3>Data Anomaly Investigations</h3>
+              <p>Ontario Ministry of Transportation</p>
               <p class="timeline__details">
-                Gadget chain via legacy SOAP service, pivoted to domain admin in
-                11 minutes. Assisted with hot patch rollout.
+                Used SQL + Python to scan datasets, identify anomalies, and feed QA teams with validation
+                evidence for transportation initiatives.
               </p>
             </div>
           </div>
           <div class="timeline__item">
-            <div class="timeline__date">2022-12</div>
+            <div class="timeline__date">2023-04</div>
             <div class="timeline__body">
-              <h3>SAML Replay + Key Exfil</h3>
-              <p>Cloud identity provider | $14,700</p>
+              <h3>TryHackMe — Pyrat & Evil-GPT</h3>
+              <p>Personal Labs</p>
               <p class="timeline__details">
-                Poisoned ACS endpoint and replayed forged assertions to siphon long-lived signing keys.
-                Coordinated rolling credential resets with defender team.
+                Automated fuzzing & adversarial prompts to root lab targets, then captured lessons for
+                future detection + mitigation practice.
               </p>
             </div>
           </div>
@@ -289,29 +397,25 @@
         </div>
         <div class="cert-grid">
           <div class="cert neon">
-            <p class="cert__title">OSCP</p>
-            <p>Offensive Security Certified Professional</p>
+            <p class="cert__title">CompTIA Security+</p>
+            <p>Scheduled · Dec 2025</p>
           </div>
           <div class="cert neon">
-            <p class="cert__title">GXPN</p>
-            <p>GIAC Exploit Researcher & Advanced Pen Tester</p>
+            <p class="cert__title">TryHackMe PT1</p>
+            <p>Junior Penetration Tester · In Progress</p>
           </div>
-          <div class="cert neon">
-            <p class="cert__title">GCTI</p>
-            <p>GIAC Cyber Threat Intelligence</p>
-          </div>
-          <div class="cert neon">
-            <p class="cert__title">CISSP</p>
-            <p>Certified Information Systems Security Professional</p>
-          </div>
-          <div class="cert neon">
-            <p class="cert__title">CRTO</p>
-            <p>Certified Red Team Operator</p>
-          </div>
-          <div class="cert neon">
-            <p class="cert__title">CCSP</p>
-            <p>Cloud Security Professional</p>
-          </div>
+        </div>
+        <div class="education-list">
+          <article class="education-card">
+            <p class="education__degree">B.Sc. Computer Science</p>
+            <p>Lakehead University · Orillia, ON</p>
+            <span>Expected Apr 2027</span>
+          </article>
+          <article class="education-card">
+            <p class="education__degree">Dipl. (Hons.) Computer Programming</p>
+            <p>Georgian College · Barrie, ON</p>
+            <span>Graduated Aug 2023</span>
+          </article>
         </div>
       </section>
 
@@ -323,46 +427,50 @@
         <div class="experience-grid">
           <article class="xp-card">
             <header>
-              <p class="xp-card__title">Darkline Security</p>
+              <p class="xp-card__title">Ontario Ministry of Transportation</p>
+              <span class="xp-card__date">Jan 2023 — Apr 2024</span>
+            </header>
+            <p class="xp-card__role">Junior Technical Analyst (Co-op)</p>
+            <ul>
+              <li>Boosted backend + frontend performance across Azure + SQL workloads</li>
+              <li>Led 20+ sprint ceremonies to align risk reviews & secure releases</li>
+              <li>Maintained a 98% user-story success rate with policy-compliant fixes</li>
+              <li>Monitored pipelines, resolved CI/CD incidents, and tuned config drift</li>
+            </ul>
+          </article>
+          <article class="xp-card">
+            <header>
+              <p class="xp-card__title">Data & Insight Pods</p>
               <span class="xp-card__date">2022 — Present</span>
             </header>
-            <p class="xp-card__role">Lead Offensive Engineer</p>
+            <p class="xp-card__role">Full-Stack / Analytics Collaborator</p>
             <ul>
-              <li>Built purple-team lab simulating APT29 tradecraft</li>
-              <li>Invented live binary patching toolkit for evasive ops</li>
+              <li>Designed Power BI dashboards with role-based gating + anomaly alerts</li>
+              <li>Performed SQL-driven data validation and log triage for mission data</li>
+              <li>Built automation scripts (Python, Rust) to harden cloud storage flows</li>
             </ul>
           </article>
           <article class="xp-card">
             <header>
-              <p class="xp-card__title">Sentinel Forge</p>
-              <span class="xp-card__date">2020 — 2022</span>
+              <p class="xp-card__title">Offensive Security Labs</p>
+              <span class="xp-card__date">2021 — Present</span>
             </header>
-            <p class="xp-card__role">Threat Research Lead</p>
+            <p class="xp-card__role">Student Researcher</p>
             <ul>
-              <li>Published 11 CVEs across ICS and mobile stacks</li>
-              <li>Designed adversary emulation for fortune 100 SOCs</li>
+              <li>Completed 20+ TryHackMe/HTB labs covering recon → persistence</li>
+              <li>Automated recon pipelines with Python, Rust, and Nmap/Burp workflows</li>
+              <li>Documented adversary playbooks to share with peers & blue teams</li>
             </ul>
           </article>
           <article class="xp-card">
             <header>
-              <p class="xp-card__title">CipherLabs</p>
-              <span class="xp-card__date">2017 — 2020</span>
+              <p class="xp-card__title">Community & Mentorship</p>
+              <span class="xp-card__date">Ongoing</span>
             </header>
-              <p class="xp-card__role">DFIR Specialist</p>
+            <p class="xp-card__role">Cyber Collaborator</p>
             <ul>
-              <li>Co-led 36 hr ransomware containment mission</li>
-              <li>Reverse engineered custom Golang backdoor</li>
-            </ul>
-          </article>
-          <article class="xp-card">
-            <header>
-              <p class="xp-card__title">Freelance</p>
-              <span class="xp-card__date">2013 — 2017</span>
-            </header>
-            <p class="xp-card__role">Independent Researcher</p>
-            <ul>
-              <li>Earned 40+ public bug bounty acknowledgements</li>
-              <li>Published weekly zines dissecting darkweb tradecraft</li>
+              <li>Runs bilingual study groups for cloud security certifications</li>
+              <li>Helps peers set up GitHub Actions + secure Terraform scaffolding</li>
             </ul>
           </article>
         </div>
@@ -375,47 +483,48 @@
         </div>
         <div class="toolkit-grid">
           <article class="tool-card">
-            <h3>GhostDrop Probes</h3>
+            <h3>Directory Forge</h3>
             <p>
-              Disposable implants for staging payloads behind zero-trust perimeters. Auto-retire after
-              12 hours or when sensors spike above baseline.
+              Active Directory + Windows Server lab with scripted forest builds, Kerberos monitoring, and
+              GPO hardening playbooks for rapid onboarding of identity experiments.
             </p>
-            <span>Stack: Nim · Cobalt Strike · WireGuard</span>
+            <span>Stack: AD · Windows Server · PowerShell</span>
           </article>
           <article class="tool-card">
-            <h3>Obsidian Relay Mesh</h3>
+            <h3>Azure DevOps Mesh</h3>
             <p>
-              Multi-cloud redirector fabric that rotates domains, TLS personas, and padding styles to
-              shred signature-based detection.
+              CI/CD pipelines secured with branch protections, GitHub Actions, Terraform linting, and
+              container scanning to keep infrastructure deployments predictable.
             </p>
-            <span>Stack: Terraform · Nginx · Rustls</span>
+            <span>Stack: Azure · Terraform · Docker</span>
           </article>
           <article class="tool-card">
-            <h3>Chimera Lab</h3>
+            <h3>SIEM Jumpseat</h3>
             <p>
-              Offline detonation chamber with deterministic replays to teach IR teams what real-world
-              extortion crews look like in telemetry.
+              Splunk + Azure Sentinel workspace for log enrichment, KQL hunt notebooks, and quick
+              detections that align with TryHackMe purple-team drills.
             </p>
-            <span>Stack: KVM · Zeek · Kafka</span>
+            <span>Stack: KQL · Splunk · Sentinel</span>
           </article>
           <article class="tool-card">
-            <h3>CryptForge Vaults</h3>
+            <h3>Data Shield Vault</h3>
             <p>
-              Hardened dropboxes for exchanging forensic data with clients without bleeding secrets over
-              email attachments or chat apps.
+              Power BI and Tableau dashboards with row-level security, encrypted gateways, and automated
+              validation so sensitive transportation metrics stay trusted.
             </p>
-            <span>Stack: Age · Tailscale · SOPS</span>
+            <span>Stack: Power BI · SQL · Tableau</span>
           </article>
         </div>
       </section>
+
     </main>
 
     <footer class="footer">
       <p>Console open. Listening on ports 1337 · 8080 · 31337</p>
       <div class="footer__links">
-        <a href="mailto:zeroday@sentinel.red">Contact</a>
-        <a href="https://github.com">GitHub</a>
-        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="mailto:joseph@josephtascona.com">Contact</a>
+        <a href="https://github.com/josephtascona" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/josephtascona" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </footer>
 
