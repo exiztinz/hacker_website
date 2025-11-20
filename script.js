@@ -95,11 +95,11 @@ if (orbField) {
 // Ticker rotation
 const tickerText = document.getElementById("ticker-text");
 const tickerPhrases = [
-  "Checking Azure DevOps pipelines for healthy runs...",
-  "Refreshing Power BI dataflows and row-level rules...",
-  "Monitoring SQL anomaly scans for transport data...",
-  "Scheduling next TryHackMe lab + write-up block...",
-  "Syncing bilingual standups for upcoming releases..."
+  "Checking ticket queue for new user requests...",
+  "Reviewing Active Directory changes and group policy updates...",
+  "Monitoring server and network health dashboards...",
+  "Scheduling patch window for Windows and Linux systems...",
+  "Coordinating bilingual updates for users about maintenance windows..."
 ];
 let tickerIndex = 0;
 
@@ -124,32 +124,34 @@ const feed = [
   "Building dependency tree... Done",
   "Reading state information... Done",
   "Need to get 3,184 kB of archives.",
-  "Get:1 https://packages.azureedge.net stable tascona-utils 45.1 kB",
-  "Get:2 https://packages.microsoft.com prod azure-cli 2,112 kB",
-  "Get:3 https://packages.dev transport-metrics 1,027 kB",
+  "Get:1 https://packages.repo.local stable tascona-utils 45.1 kB",
+  "Get:2 https://packages.microsoft.com prod remote-admin-tools 2,112 kB",
+  "Get:3 https://packages.net monitoring-agents 1,027 kB",
   "Fetched 3,184 kB in 1s (3,050 kB/s)",
   "Selecting previously unselected package tascona-utils.",
   "Preparing to unpack .../tascona-utils.deb ...",
   "Unpacking tascona-utils (1.4.2) ...",
   "Setting up tascona-utils (1.4.2) ...",
-  "$ az pipelines run --name secure-release",
-  "[build] lint + tests ......................... PASS",
-  "[build] docker image scan .................... PASS",
-  "[deploy] pushing to staging containers ....... PASS",
-  "[deploy] gating approval pending .............",
-  "$ sqltool validate datasets --env prod",
-  "rows scanned: 1,204,112 | anomalies: 0 | integrity: OK",
-  "$ powerbi refresh dashboards --scope exec",
-  "refresh completed in 37s • row-level security enforced",
-  "$ gh actions run devsec --wait",
-  "stage 1/3 ✓ react build | stage 2/3 ✓ api tests | stage 3/3 ✓ infra sync",
-  "$ tryhackme queue --next pyrat",
-  ">> lab ready · launching tmux session",
-  "$ journalctl -u learning-notes --tail 4",
-  "  • azure devops runbook updated",
-  "  • bilingual standup scheduled",
-  "  • terraform plan reviewed",
-  "  • lab write-up drafted",
+  "$ adtool list users --ou IT",
+  "found: 24 enabled accounts | 0 locked | 1 password expiring soon",
+  "$ netcheck ping core-switch-01",
+  "core-switch-01 is alive • latency: 3.2 ms • packet loss: 0%",
+  "$ backupctl verify --all-servers",
+  "Last backup status: SUCCESS | servers: 12 | warnings: 0",
+  "$ patchctl schedule --group 'workstations' --window 'Sat 01:00-03:00'",
+  "patch window created • 48 devices targeted",
+  "$ tickets list --me",
+  "#1432 password reset • #1433 VPN issues • #1434 printer offline",
+  "$ ssh admin@app-server-01",
+  "journalctl -u app.service --tail 5",
+  "  • app restarted cleanly",
+  "  • no new errors detected",
+  "  • response times within normal range",
+  "  • log rotation completed",
+  "$ homelab snapshot --env training",
+  "  • windows-lab updated",
+  "  • linux-lab updated",
+  "  • network-lab configs saved",
   "$ idle... waiting for next task ▒▒▒"
 ];
 
@@ -342,7 +344,33 @@ if ("IntersectionObserver" in window) {
 // Dossier download – generates text file with summary
 const dossierBtn = document.getElementById("download-dossier");
 dossierBtn?.addEventListener("click", () => {
-  const dossier = `Joseph Tascona · Cybersecurity & DevSecOps\n=================================================\nLocation: Toronto, Ontario (English / Français)\nEmail: joseph@josephtascona.com | Phone: (705) 737-7265\n\nProfessional Summary:\n- IT & cybersecurity student (Lakehead University '27) with 1.5 years of co-op work.\n- Experienced in Azure DevOps, React, SQL, Power BI, and threat-resilient automation.\n- Passionate about protecting data flows and running adversary-style labs.\n\nRecent Highlights:\n- Ontario Ministry of Transportation: boosted Azure/SQL apps, led 20+ sprint ceremonies.\n- TryHackMe Pyrat: automated fuzzing/brute-force to root, documented escalation steps.\n- TryHackMe Evil-GPT: adversarial AI testing with mitigation playbook.\n\nCore Skills:\n- Languages: Python, JavaScript/TypeScript, Rust, C/C++, SQL\n- Cloud/DevOps: Azure, AWS, Docker, Terraform, GitHub Actions, Linux hardening\n- Security Tools: Active Directory, Burp Suite, Nmap, Wireshark, SIEM (Splunk/Sentinel)\n\nCertifications & Education:\n- CompTIA Security+ (scheduled Dec 2025)\n- TryHackMe Junior Penetration Tester (in progress)\n- B.Sc. Computer Science · Lakehead University (2027)\n- Dipl. (Hons.) Computer Programming · Georgian College (2023)\n\nPing anytime to collaborate on secure automation or purple-team drills.`;
+  const dossier = `Joseph Tascona · IT Support & Systems Administration
+=================================================
+Location: Toronto, Ontario (English / Français)
+Email: joseph@josephtascona.com | Phone: (705) 737-7265
+
+Professional Summary:
+- IT support and infrastructure-focused technologist with 1.5 years of co-op work.
+- Experienced with Azure, SQL, automation-heavy environments, and day-to-day system care.
+- Focused on keeping Windows/Linux systems stable, networks reliable, and users supported.
+
+Recent Highlights:
+- Ontario Ministry of Transportation: supported Azure/SQL apps and improved reliability across environments.
+- Homelab practice: built small Windows/Linux and network labs to rehearse patching and troubleshooting.
+- Collaborative work: shared bilingual updates and simple runbooks to help teammates resolve issues faster.
+
+Core Skills:
+- Languages & scripting: Python, JavaScript/TypeScript, Rust, C/C++, SQL
+- Systems & cloud: Windows Server, Linux, Azure, basic AWS, backup/restore workflows
+- Networking & tools: Cisco-style networking basics, Active Directory, Wireshark, Nmap, SIEM (Splunk/Sentinel)
+
+Certifications & Education:
+- CompTIA Security+ (scheduled Dec 2025)
+- Cisco CCNA (in progress)
+- B.Sc. Computer Science · Lakehead University (2027)
+- Dipl. (Hons.) Computer Programming · Georgian College (2023)
+
+Ping anytime to collaborate on infrastructure, support workflows, or security-conscious system improvements.`;
   const blob = new Blob([dossier], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
