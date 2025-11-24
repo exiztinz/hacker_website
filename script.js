@@ -346,7 +346,7 @@ const dossierBtn = document.getElementById("download-dossier");
 dossierBtn?.addEventListener("click", () => {
   const dossier = `Joseph Tascona · IT Support & Systems Administration
 =================================================
-Location: Toronto, Ontario (English / Français)
+Location: Barrie, Ontario (English / Français)
 Email: joseph@josephtascona.com | Phone: (705) 737-7265
 
 Professional Summary:
