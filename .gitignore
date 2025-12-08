@@ -1,1 +1,10 @@
+# Node deps & logs
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Local files
+.DS_Store
+
+# Built/minified artifacts
 script.js
